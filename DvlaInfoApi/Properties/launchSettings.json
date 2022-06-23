@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "DvlaInfoApi": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7096",
+      "launchBrowser": false,
+
+      "environmentVariables": {
+        "DVLA_MYSQL_CONN_STR": "Server=localhost; Port=3307; Uid=root; Pwd=secret; database=dvladata;",
+        "DVLA_BASE_URL": "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+        "DVLA_API_KEY": "Sr5ovHRyWZ46c8gmwUCY35eBbFbBlOoF6rRQJNka"
+      }
+    }
+  }
+}

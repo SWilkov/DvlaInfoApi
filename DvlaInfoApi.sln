@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi", "DvlaInfoApi\DvlaInfoApi.csproj", "{898CF342-31BF-42CE-9D54-5E1A7D9521B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{27A693FC-5B02-4E9D-B9D3-9C72AEB8A78E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{26989262-840F-46A2-8849-40583DEBB241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi.DataLayer", "DvlaInfoApi.DataLayer\DvlaInfoApi.DataLayer.csproj", "{236D658A-483E-4CE2-B0DA-DE4C19291C5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi.DataLayer.MySQL.EFCore", "DvlaInfoApi.DataLayer.MySQL.EFCore\DvlaInfoApi.DataLayer.MySQL.EFCore.csproj", "{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi.Framework", "DvlaInfoApi.Framework\DvlaInfoApi.Framework.csproj", "{24C7BFCA-FEEF-4699-B702-C055094EB179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi.Dvla.UK", "DvlaInfoApi.Dvla.UK\DvlaInfoApi.Dvla.UK.csproj", "{576F14A8-2AFC-4B0E-A355-454FB10A8136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{898CF342-31BF-42CE-9D54-5E1A7D9521B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898CF342-31BF-42CE-9D54-5E1A7D9521B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898CF342-31BF-42CE-9D54-5E1A7D9521B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898CF342-31BF-42CE-9D54-5E1A7D9521B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236D658A-483E-4CE2-B0DA-DE4C19291C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236D658A-483E-4CE2-B0DA-DE4C19291C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236D658A-483E-4CE2-B0DA-DE4C19291C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236D658A-483E-4CE2-B0DA-DE4C19291C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C7BFCA-FEEF-4699-B702-C055094EB179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C7BFCA-FEEF-4699-B702-C055094EB179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C7BFCA-FEEF-4699-B702-C055094EB179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C7BFCA-FEEF-4699-B702-C055094EB179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{236D658A-483E-4CE2-B0DA-DE4C19291C5C} = {27A693FC-5B02-4E9D-B9D3-9C72AEB8A78E}
+		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466} = {27A693FC-5B02-4E9D-B9D3-9C72AEB8A78E}
+		{24C7BFCA-FEEF-4699-B702-C055094EB179} = {26989262-840F-46A2-8849-40583DEBB241}
+		{576F14A8-2AFC-4B0E-A355-454FB10A8136} = {26989262-840F-46A2-8849-40583DEBB241}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEBDA6F1-FB27-420A-9F10-530500558F80}
+	EndGlobalSection
+EndGlobal
