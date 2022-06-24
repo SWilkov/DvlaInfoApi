@@ -18,6 +18,19 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Repositories
       _vehicleMapper = mapper;
     }
 
+    public async Task<IEnumerable<Vehicle>> GetAll(bool noTracking = false)
+    {
+      List<VehicleDataModel> all;
+      if (noTracking)
+        all = await _context.Vehicles.AsNoTracking().Include(x => x.DvlaInfo).ToListAsync();
+      else
+        all = await _context.Vehicles.Include(x => x.DvlaInfo).ToListAsync();
+
+      if (all is null) return null;
+
+      return all.Select(x => _vehicleMapper.Map(x));
+    }
+
     public async Task<Vehicle> Get(string registration)
     {
       if (string.IsNullOrEmpty(registration))

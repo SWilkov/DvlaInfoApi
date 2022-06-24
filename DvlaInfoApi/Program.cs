@@ -1,6 +1,7 @@
 using DvlaInfoApi.DataLayer.MySQL.EFCore.Extensions;
 using DvlaInfoApi.Dvla.UK.Extensions;
 using DvlaInfoApi.Dvla.UK.Models;
+using DvlaInfoApi.Framework.Extensions;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +22,7 @@ var host = new HostBuilder()
       #endregion
 
       services.AddMediatR(Assembly.GetExecutingAssembly());
+      services.AddDvlaFrameworkExtras();
 
       services.AddDvlaGovData(new DvlaSettings(
         Environment.GetEnvironmentVariable("DVLA_BASE_URL") ?? throw new ArgumentException("Error retrieving DVLA url!"),
