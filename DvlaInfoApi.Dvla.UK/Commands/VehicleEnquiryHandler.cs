@@ -1,5 +1,5 @@
-﻿using AW.Utilities.Commands.Interfaces;
-using DvlaInfoApi.Dvla.UK.Services;
+﻿using DvlaInfoApi.Dvla.UK.Services;
+using DvlaInfoApi.Utils.Interfaces;
 
 namespace DvlaInfoApi.Dvla.UK.Commands
 {

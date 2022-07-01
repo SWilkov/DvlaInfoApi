@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Net;
-using AW.Utilities.Commands.Interfaces;
 using DvlaInfoApi.DataObjects;
 using DvlaInfoApi.Dvla.UK.Commands;
 using DvlaInfoApi.Queries;
+using DvlaInfoApi.Utils.Interfaces;
 using MediatR;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;

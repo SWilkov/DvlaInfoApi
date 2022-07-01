@@ -1,10 +1,10 @@
-using System.Collections.Generic;
 using System.Net;
-using AW.Utilities.Commands.Interfaces;
-using AW.Utilities.Validation.Interfaces;
 using DvlaInfoApi.Dvla.UK.Commands;
 using DvlaInfoApi.Framework.Models;
 using DvlaInfoApi.Queries;
+using DvlaInfoApi.Utils.Interfaces;
+using DvlaInfoApi.Utils.Validation.Enums;
+using DvlaInfoApi.Utils.Validation.Interfaces;
 using MediatR;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -58,7 +58,7 @@ namespace DvlaInfoApi.Functions
         await _dvlaGetVehicleHandler.ExecuteAsync(cmd);
 
         var info = _vehicleValidator.Validate(cmd.Vehicle);
-        if (info.Result == AW.Utilities.Validation.Enums.Result.Invalid)
+        if (info.Result == Result.Invalid)
         {
           _logger.LogWarning($"{cmd.Vehicle.Registration} Failed Vehicle validation with error(s): {info.Message}");
           continue;

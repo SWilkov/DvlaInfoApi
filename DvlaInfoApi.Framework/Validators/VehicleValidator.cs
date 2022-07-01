@@ -1,7 +1,7 @@
-﻿using AW.Utilities.Validation.Enums;
-using AW.Utilities.Validation.Interfaces;
-using AW.Utilities.Validation.Models;
-using DvlaInfoApi.Framework.Models;
+﻿using DvlaInfoApi.Framework.Models;
+using DvlaInfoApi.Utils.Validation.Enums;
+using DvlaInfoApi.Utils.Validation.Interfaces;
+using DvlaInfoApi.Utils.Validation.Models;
 
 namespace DvlaInfoApi.Framework.Validators
 {
