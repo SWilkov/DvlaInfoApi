@@ -16,7 +16,7 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Repositories
     private readonly IVehicleMapper _vehicleMapper;
     private readonly DvlaDataContext _context;
     private readonly IVehicleReadRepository _vehicleReadRepository;
-    public VehicleRepository(IVehicleMapper vehicleMapper,      
+    public VehicleRepository(IVehicleMapper vehicleMapper,
       DvlaDataContext context, IVehicleReadRepository vehicleReadRepository)
     {
       _vehicleMapper = vehicleMapper;
@@ -52,15 +52,22 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Repositories
       }
       else
       {
-        var updated =  _context.Vehicles.Update(dm);
-        var rows = await _context.SaveChangesAsync();
-        if (rows == default(int))
+        var existing = _context.Vehicles.FirstOrDefault(x => x.Registration == vehicle.Registration);
+        if (existing is not null)
         {
-          //TODO log
-        }
+          _context.Entry(existing).CurrentValues.SetValues(dm);
+          var rows = await _context.SaveChangesAsync();
 
-        return _vehicleMapper.Map(updated.Entity);
+          if (rows == default(int))
+          {
+            //TODO log
+          }
+
+          return _vehicleMapper.Map(dm);
+        }
+        else
+          return vehicle;
       }
-    }    
+    } 
   }
 }

@@ -70,7 +70,7 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Migrations
                     b.HasIndex("VehicleId")
                         .IsUnique();
 
-                    b.ToTable("dvlaInfos");
+                    b.ToTable("dvlaInfos", (string)null);
                 });
 
             modelBuilder.Entity("DvlaInfoApi.DataLayer.MySQL.EFCore.DataModels.VehicleDataModel", b =>
@@ -125,7 +125,7 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Migrations
 
                     b.HasIndex("Registration");
 
-                    b.ToTable("Vehicles");
+                    b.ToTable("Vehicles", (string)null);
                 });
 
             modelBuilder.Entity("DvlaInfoApi.DataLayer.MySQL.EFCore.DataModels.DvlaInfoDataModel", b =>

@@ -1,4 +1,5 @@
 ﻿using AW.Utilities.Commands.Interfaces;
+using AW.Utilities.Validation.Interfaces;
 using DvlaInfoApi.Dvla.UK.Models;
 using DvlaInfoApi.Dvla.UK.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,8 @@ namespace DvlaInfoApi.Dvla.UK.Extensions
       #region Commands
       services.AddScoped<ICommandHandlerAsync<Commands.VehicleEnquiryCommand>, Commands.VehicleEnquiryHandler>();
       #endregion
+
+      
     }
   }
 }
