@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DvlaInfoApi.Framework", "Dv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DvlaInfoApi.Dvla.UK", "DvlaInfoApi.Dvla.UK\DvlaInfoApi.Dvla.UK.csproj", "{576F14A8-2AFC-4B0E-A355-454FB10A8136}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EACBA446-BEA2-46E0-87C5-9D45CBD212A4}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
