@@ -19,8 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DvlaInfoApi.Dvla.UK", "Dvla
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EACBA446-BEA2-46E0-87C5-9D45CBD212A4}"
 	ProjectSection(SolutionItems) = preProject
-		NuGet.config = NuGet.config
+		.github\workflows\DvlaInfoApi.yml = .github\workflows\DvlaInfoApi.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvlaInfoApi.Utils", "DvlaInfoApi.Utils\DvlaInfoApi.Utils.csproj", "{F0683476-6318-4A0B-8ABE-A250C658DDBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576F14A8-2AFC-4B0E-A355-454FB10A8136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0683476-6318-4A0B-8ABE-A250C658DDBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0683476-6318-4A0B-8ABE-A250C658DDBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0683476-6318-4A0B-8ABE-A250C658DDBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0683476-6318-4A0B-8ABE-A250C658DDBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{CEAD7EA3-ED6C-40FD-9023-5CC8EA0E1466} = {27A693FC-5B02-4E9D-B9D3-9C72AEB8A78E}
 		{24C7BFCA-FEEF-4699-B702-C055094EB179} = {26989262-840F-46A2-8849-40583DEBB241}
 		{576F14A8-2AFC-4B0E-A355-454FB10A8136} = {26989262-840F-46A2-8849-40583DEBB241}
+		{F0683476-6318-4A0B-8ABE-A250C658DDBC} = {26989262-840F-46A2-8849-40583DEBB241}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEBDA6F1-FB27-420A-9F10-530500558F80}

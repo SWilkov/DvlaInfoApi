@@ -1,7 +1,6 @@
-﻿using AW.Utilities.Commands.Interfaces;
-using AW.Utilities.Validation.Interfaces;
-using DvlaInfoApi.Dvla.UK.Models;
+﻿using DvlaInfoApi.Dvla.UK.Models;
 using DvlaInfoApi.Dvla.UK.Services;
+using DvlaInfoApi.Utils.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DvlaInfoApi.Dvla.UK.Extensions

@@ -1,5 +1,5 @@
-﻿using AW.Utilities.Validation.Interfaces;
-using DvlaInfoApi.Framework.Models;
+﻿using DvlaInfoApi.Framework.Models;
+using DvlaInfoApi.Utils.Validation.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DvlaInfoApi.Framework.Extensions
