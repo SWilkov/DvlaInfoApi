@@ -29,7 +29,11 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Mappers
         Color = source.Color,
         MotExpiryDate = source.MotExpiryDate,
         MotStatus = source.MotStatus,
-        DvlaInfo = _mapper.Map(source.DvlaInfo)
+        DvlaInfo = _mapper.Map(source.DvlaInfo),
+        RealDrivingEmissions = string.IsNullOrWhiteSpace(source.RealDrivingEmissions) ? "" : source.RealDrivingEmissions,
+        RevenueWeight = source.RevenueWeight,
+        EuroStatus = string.IsNullOrWhiteSpace(source.EuroStatus) ? "" : source.EuroStatus,
+        AutomatedVehicle = source.AutomatedVehicle,
       };
 
       return dm;
@@ -47,7 +51,11 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Mappers
         FuelType = source.FuelType,
         Make = source.Make,
         Registration = source.Registration,
-        DvlaInfo = _mapper.Map(source.DvlaInfo)
+        DvlaInfo = _mapper.Map(source.DvlaInfo),
+        RealDrivingEmissions = source.RealDrivingEmissions,
+        RevenueWeight = source.RevenueWeight,
+        EuroStatus = source.EuroStatus,
+        AutomatedVehicle = source.AutomatedVehicle,
       };
     }
   }

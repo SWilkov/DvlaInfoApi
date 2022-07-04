@@ -11,5 +11,9 @@
     public string MotStatus { get; set; }
     public DateTime MotExpiryDate { get; set; }
     public DvlaInfo DvlaInfo { get; set; }
+    public bool AutomatedVehicle { get; set; }
+    public int RevenueWeight { get; set; }
+    public string RealDrivingEmissions { get; set; }
+    public string EuroStatus { get; set; }
   }
 }
