@@ -27,5 +27,14 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.DataModels
     [Column("mot_expiry_date")]
     public DateTime MotExpiryDate { get; set; }
     public DvlaInfoDataModel DvlaInfo { get; set; }
+    [Column("automatedVehicle")]
+    public bool AutomatedVehicle { get; set; }
+    [Column("revenueWeight")]
+    public int RevenueWeight { get; set; }
+    [Column("realDrivingEmissions")]
+    public string RealDrivingEmissions { get; set; }
+    [Column("euroStatus")]
+    public string EuroStatus { get; set; }
+
   }
 }

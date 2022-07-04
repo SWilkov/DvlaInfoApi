@@ -28,6 +28,8 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Data
               .OnDelete(DeleteBehavior.Cascade);
         entity.HasIndex(x => x.Registration);
         entity.Property(x => x.Registration).IsRequired();
+
+        entity.Property(x => x.AutomatedVehicle).HasDefaultValue(false);
       });
 
       base.OnModelCreating(modelBuilder);
