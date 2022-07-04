@@ -3,6 +3,7 @@ using System;
 using DvlaInfoApi.DataLayer.MySQL.EFCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Migrations
 {
     [DbContext(typeof(DvlaDataContext))]
-    partial class DvlaDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220704091040_VehicleModifiedDate")]
+    partial class VehicleModifiedDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

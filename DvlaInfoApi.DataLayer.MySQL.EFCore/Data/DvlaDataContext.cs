@@ -32,5 +32,30 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Data
 
       base.OnModelCreating(modelBuilder);
     }
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+      var entries = ChangeTracker.Entries()
+                        .Where(x => x.Entity is BaseDataModel && (
+                        x.State == EntityState.Added || x.State == EntityState.Modified));
+
+      if (entries != null && entries.Any())
+      {
+        foreach(var e in entries)
+        {          
+          if (e.State == EntityState.Added)
+          {
+            ((BaseDataModel)e.Entity).CreatedAt = DateTime.Now;
+            ((BaseDataModel)e.Entity).ModifiedAt = DateTime.Now;
+          } 
+          else if (e.State == EntityState.Modified)
+          {
+            ((BaseDataModel)e.Entity).ModifiedAt = DateTime.Now;
+          }
+        }
+      }
+
+      return base.SaveChangesAsync(cancellationToken);
+    }
   }
 }

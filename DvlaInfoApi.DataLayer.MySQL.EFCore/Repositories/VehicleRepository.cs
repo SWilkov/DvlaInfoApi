@@ -37,8 +37,7 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Repositories
       var dm = _vehicleMapper.Map(vehicle);
       var exists = await _vehicleReadRepository.Exists(vehicle.Registration);
       if (vehicle.Id == default(int) || !exists)
-      {
-        dm.CreatedAt = DateTime.Now;
+      {        
         var entity = await _context.Vehicles.AddAsync(dm);
         if (entity.State != Microsoft.EntityFrameworkCore.EntityState.Added)
         {
