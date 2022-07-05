@@ -8,7 +8,7 @@ namespace DvlaInfoApi.Dvla.UK.Models
     public string RegistrationNumber { get; set; }
     [JsonPropertyName("co2Emissions")]
     public int Co2Emissions { get; set; }
-    [JsonPropertyName("engineCapicity")]
+    [JsonPropertyName("engineCapacity")]
     public int EngineCapicity { get; set; }
     [JsonPropertyName("markedForExport")]
     public bool MarkedForExport { get; set; }
@@ -36,5 +36,13 @@ namespace DvlaInfoApi.Dvla.UK.Models
     public string Wheelplan { get; set; }
     [JsonPropertyName("monthOfFirstRegistration")]
     public string MonthOfFirstRegistration { get; set; }
+    [JsonPropertyName("revenueWeight")]
+    public int RevenueWeight { get; set; }
+    [JsonPropertyName("euroStatus")]
+    public string EuroStatus { get; set; }
+    [JsonPropertyName("realDrivingEmissions")]
+    public string RealDrivingEmissions { get; set; }
+    [JsonPropertyName("automatedVehicle")]
+    public bool AutomatedVehicle { get; set; }
   }
 }

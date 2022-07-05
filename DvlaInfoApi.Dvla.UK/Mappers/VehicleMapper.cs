@@ -15,13 +15,17 @@ namespace DvlaInfoApi.Dvla.UK.Mappers
       {
         DvlaInfo = _mapper.Map(source),
         EngineCapacity = source.EngineCapicity,
-        Color = source.Colour,
-        FuelType = source.FuelType,
-        Make = source.Make,
+        Color = string.IsNullOrWhiteSpace(source.Colour) ? string.Empty : source.Colour,
+        FuelType = string.IsNullOrWhiteSpace(source.FuelType) ? string.Empty : source.FuelType,
+        Make = string.IsNullOrWhiteSpace(source.Make) ? string.Empty : source.Make,
         MonthRegistration = source.MonthOfFirstRegistration,
         MotExpiryDate = source.MotExpiryDate,
-        MotStatus = source.MotStatus,
-        Registration = source.RegistrationNumber
+        MotStatus = string.IsNullOrWhiteSpace(source.MotStatus) ? "" : source.MotStatus,
+        Registration = source.RegistrationNumber,
+        AutomatedVehicle = source.AutomatedVehicle,
+        RealDrivingEmissions = string.IsNullOrWhiteSpace(source.RealDrivingEmissions) ? string.Empty : source.RealDrivingEmissions,
+        EuroStatus = string.IsNullOrWhiteSpace(source.EuroStatus) ? string.Empty : source.EuroStatus,
+        RevenueWeight = source.RevenueWeight
       };
     }
   }

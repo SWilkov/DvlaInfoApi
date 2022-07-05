@@ -11,7 +11,7 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Factories
       var connectionString = Environment.GetEnvironmentVariable("MYSQL_CONN_STR");
 
       var optionsBuilder = new DbContextOptionsBuilder<DvlaDataContext>();
-      optionsBuilder.UseMySql("Server=localhost; Port=3307; Uid=root; Pwd=secret; database=dvladata;",
+      optionsBuilder.UseMySql("Server=wilkos-mysql.mysql.database.azure.com; Port=3306; Database=dvladata; Uid=wilkov@wilkos-mysql; Pwd=Gr33nbay; SslMode=Preferred;",
         new MySqlServerVersion(new Version(5, 7, 32)),
         options =>
         {
