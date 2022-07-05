@@ -31,6 +31,16 @@ namespace DvlaInfoApi.DataLayer.MySQL.EFCore.Repositories
       return all.Select(x => _vehicleMapper.Map(x));
     }
 
+    public async Task<Vehicle> First()
+    {
+      var first = await _context.Vehicles.Include(x => x.DvlaInfo)
+                                .FirstOrDefaultAsync();
+
+      if (first == null) return null;
+
+      return _vehicleMapper.Map(first);
+    }
+
     public async Task<Vehicle> Get(string registration)
     {
       if (string.IsNullOrEmpty(registration))

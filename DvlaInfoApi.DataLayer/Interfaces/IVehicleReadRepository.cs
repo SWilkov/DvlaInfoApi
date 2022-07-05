@@ -8,5 +8,6 @@ namespace DvlaInfoApi.DataLayer.Interfaces
     Task<IEnumerable<Vehicle>> GetAll(bool noTracking = false);
     Task<Vehicle> Get(string registration);
     Task<bool> Exists(string registration);
+    Task<Vehicle> First();
   }
 }
