@@ -9,7 +9,7 @@ namespace DvlaInfoApi.Dvla.UK.Models
     [JsonPropertyName("co2Emissions")]
     public int Co2Emissions { get; set; }
     [JsonPropertyName("engineCapacity")]
-    public int EngineCapicity { get; set; }
+    public int EngineCapacity { get; set; }
     [JsonPropertyName("markedForExport")]
     public bool MarkedForExport { get; set; }
     [JsonPropertyName("fuelType")] 
