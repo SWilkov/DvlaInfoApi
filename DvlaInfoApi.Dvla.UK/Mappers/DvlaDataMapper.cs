@@ -13,12 +13,12 @@ namespace DvlaInfoApi.Dvla.UK.Mappers
       return new DvlaInfo
       {        
         TaxDueDate = source.TaxDueDate,
-        TaxStatus = source.TaxStatus,
+        TaxStatus = string.IsNullOrWhiteSpace(source.TaxStatus) ? string.Empty : source.TaxStatus,
         Co2Emissions = source.Co2Emissions,
         DateOfLastV5CIssued = source.DateOfLastV5CIssued,
         MarkedForExport = source.MarkedForExport,
-        TypeApproval = source.TypeApproval,
-        Wheelplan = source.Wheelplan, 
+        TypeApproval = string.IsNullOrWhiteSpace(source.TypeApproval) ? string.Empty : source.TypeApproval,
+        Wheelplan = string.IsNullOrWhiteSpace(source.Wheelplan) ? string.Empty : source.Wheelplan, 
       };
     }
   }
