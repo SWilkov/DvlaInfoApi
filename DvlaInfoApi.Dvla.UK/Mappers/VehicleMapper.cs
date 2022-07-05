@@ -14,7 +14,7 @@ namespace DvlaInfoApi.Dvla.UK.Mappers
       return new Vehicle
       {
         DvlaInfo = _mapper.Map(source),
-        EngineCapacity = source.EngineCapicity,
+        EngineCapacity = source.EngineCapacity,
         Color = string.IsNullOrWhiteSpace(source.Colour) ? string.Empty : source.Colour,
         FuelType = string.IsNullOrWhiteSpace(source.FuelType) ? string.Empty : source.FuelType,
         Make = string.IsNullOrWhiteSpace(source.Make) ? string.Empty : source.Make,
